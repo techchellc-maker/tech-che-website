@@ -811,3 +811,233 @@ footer p {
         padding: 30px 25px;
     }
 }
+/* ========================================
+   TECH CHE — REQUEST A QUOTE PAGE
+   ======================================== */
+
+.quote-page {
+    background: #faf7fb;
+    min-height: 100vh;
+}
+
+/* Quote Page Header */
+
+.quote-hero {
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(151, 42, 219, .35),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #050505,
+            #17091f,
+            #250a34
+        );
+
+    color: white;
+    text-align: center;
+    padding: 75px 25px 65px;
+}
+
+.quote-hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: 65px;
+    line-height: 1;
+    margin: 8px 0 18px;
+}
+
+.quote-hero h1 span {
+    color: #b83ff1;
+}
+
+.quote-hero > p:last-child {
+    max-width: 550px;
+    margin: auto;
+    color: #eeeeee;
+    font-size: 16px;
+}
+
+
+/* ========================================
+   FORM CONTAINER
+   ======================================== */
+
+.quote-form-section {
+    padding: 60px 25px 90px;
+}
+
+.quote-form-container {
+    max-width: 760px;
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 24px;
+
+    border: 1px solid #eadcf0;
+
+    box-shadow:
+        0 15px 45px rgba(74, 20, 96, .10);
+}
+
+
+/* ========================================
+   FORM LAYOUT
+   ======================================== */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #27162e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    padding: 14px 16px;
+
+    border: 1.5px solid #ddcfe3;
+
+    border-radius: 12px;
+
+    background: #fcfafd;
+
+    color: #171717;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Purple focus effect */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #a62cdd;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(166, 44, 221, .10);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+   ======================================== */
+
+.form-submit {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7620b3,
+            #bd47f3
+        );
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.form-submit:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(136, 31, 183, .25);
+}
+
+
+/* Note underneath form */
+
+.form-note {
+
+    text-align: center;
+
+    margin-top: 17px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 20px;
+
+    color: #7c268f;
+}
+
+
+/* ========================================
+   QUOTE PAGE MOBILE
+   ======================================== */
+
+@media (max-width: 650px) {
+
+    .quote-hero {
+        padding: 55px 20px;
+    }
+
+    .quote-hero h1 {
+        font-size: 50px;
+    }
+
+    .quote-form-section {
+        padding: 35px 15px 65px;
+    }
+
+    .quote-form-container {
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
