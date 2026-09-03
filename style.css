@@ -1,6 +1,6 @@
-/* =========================
-   TECH CHE WEBSITE STYLES
-   ========================= */
+/* ========================================
+   TECH CHE — MAIN WEBSITE STYLE
+   ======================================== */
 
 * {
     margin: 0;
@@ -13,384 +13,801 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #111111;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #151515;
     line-height: 1.6;
 }
 
-/* =========================
+:root {
+    --purple: #9c27e8;
+    --deep-purple: #6411a3;
+    --light-purple: #e6c5f7;
+    --soft-purple: #f6effa;
+    --black: #090909;
+    --off-black: #140d18;
+    --white: #ffffff;
+}
+
+/* ========================================
    NAVIGATION
-   ========================= */
+   ======================================== */
 
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    background: var(--black);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 nav {
-    max-width: 1200px;
+    max-width: 1250px;
+    min-height: 92px;
     margin: auto;
-    padding: 18px 25px;
+    padding: 10px 25px;
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
 }
 
-.logo-link {
+.brand {
     display: flex;
     align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
 }
 
-.logo-image {
-    width: 120px;
-    height: auto;
-    display: block;
+.brand img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+}
+
+.brand > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-family: "Caveat", cursive;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1;
+    color: #c05cff;
+}
+
+.tagline {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: white;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 35px;
 }
 
-nav a {
+nav ul a {
+    color: white;
     text-decoration: none;
-    color: #111111;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .25s;
 }
 
 nav ul a:hover {
-    color: #A020F0;
+    color: #c05cff;
 }
 
 .nav-button {
-    background-color: #6A0DAD;
+    text-decoration: none;
     color: white;
-    padding: 11px 18px;
-    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #7420b6,
+        #bd4ff4
+    );
+
+    border: 1px solid #d794ff;
+
+    transition: .25s;
 }
 
 .nav-button:hover {
-    background-color: #A020F0;
+    transform: translateY(-2px);
 }
 
-/* =========================
-   HERO SECTION
-   ========================= */
+
+/* ========================================
+   HERO
+   ======================================== */
 
 .hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
     background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(140, 31, 211, .35),
+            transparent 27%
+        ),
         linear-gradient(
             120deg,
-            rgba(106, 13, 173, 0.96),
-            rgba(17, 17, 17, 0.96)
+            #050505,
+            #13081a 55%,
+            #20082f
         );
+
     color: white;
-    padding: 70px 25px;
+    padding: 80px 25px;
+    overflow: hidden;
 }
 
 .hero-content {
     max-width: 1200px;
-    width: 100%;
+    min-height: 500px;
     margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
 }
 
-.small-heading {
-    color: #d9a7ff;
-    font-size: 14px;
+.hero-text h1 {
+    font-family: "Caveat", cursive;
+    font-size: 75px;
+    line-height: .95;
+    font-weight: 600;
+}
+
+.hero-text h1 span,
+.hero-text h1 strong {
+    display: block;
+}
+
+.hero-text h1 strong {
+    color: #a52eea;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
 }
 
-.hero h1 {
-    font-size: 64px;
-    line-height: 1.05;
-    margin-bottom: 22px;
+.purple-line {
+    width: 290px;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #8b21ca,
+        #c34dff
+    );
+
+    margin: 25px 0;
+
+    border-radius: 20px;
+
+    transform: rotate(-2deg);
 }
 
-.hero p {
-    max-width: 600px;
-    font-size: 19px;
+.hero-description {
+    max-width: 520px;
+    font-size: 17px;
     margin-bottom: 30px;
+    color: #eeeeee;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
+    margin-bottom: 25px;
 }
-
-/* =========================
-   BUTTONS
-   ========================= */
 
 .primary-button,
 .secondary-button {
     display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
     text-decoration: none;
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.3s ease;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: .25s;
 }
 
 .primary-button {
-    background-color: #A020F0;
+    background: linear-gradient(
+        135deg,
+        #8024c7,
+        #be48f5
+    );
+
     color: white;
 }
 
 .primary-button:hover {
-    background-color: #ffffff;
-    color: #6A0DAD;
+    transform: translateY(-3px);
 }
 
 .secondary-button {
-    border: 2px solid white;
+    border: 2px solid #a63fe4;
     color: white;
 }
 
 .secondary-button:hover {
-    background-color: white;
-    color: #6A0DAD;
+    background: #a63fe4;
 }
 
-/* =========================
-   GENERAL SECTIONS
-   ========================= */
-
-section {
-    padding: 90px 25px;
+.local-message {
+    font-family: "Caveat", cursive;
+    font-size: 22px;
 }
+
+.local-message:first-letter {
+    color: #b43cf0;
+}
+
+.hero-image {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 450px;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+
+    width: min(390px, 90%);
+    height: auto;
+
+    background: rgba(255,255,255,.96);
+
+    border-radius: 25px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 0 35px rgba(171, 55, 235, .55);
+}
+
+.purple-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 300px;
+
+    background: #7617b5;
+
+    border-radius:
+        46% 54% 61% 39%
+        / 48% 41% 59% 52%;
+
+    filter: blur(12px);
+
+    opacity: .65;
+
+    transform: rotate(-7deg);
+}
+
+
+/* ========================================
+   SECTION HEADINGS
+   ======================================== */
 
 .section-heading {
     text-align: center;
     margin-bottom: 45px;
 }
 
-.section-heading p {
-    color: #6A0DAD;
-    font-weight: bold;
-    letter-spacing: 2px;
+.section-heading > p,
+.small-heading {
+    color: #8b21ca;
     font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .section-heading h2 {
-    font-size: 38px;
-    margin-top: 8px;
+    margin-top: 4px;
+
+    font-family: "Caveat", cursive;
+    font-size: 49px;
+    line-height: 1;
 }
 
-/* =========================
+.section-heading h2 span {
+    color: #8f22cc;
+}
+
+
+/* ========================================
    SERVICES
-   ========================= */
+   ======================================== */
 
 .services {
-    background-color: #F7F3FA;
+    padding: 75px 25px;
+    background: #fff;
 }
 
 .service-grid {
     max-width: 1100px;
     margin: auto;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+
+    gap: 20px;
 }
 
 .service-card {
-    background-color: white;
-    padding: 35px;
-    border-radius: 14px;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid #A020F0;
-    transition: 0.3s ease;
+    background: #fbf8fc;
+
+    border: 1px solid #e9dced;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    display: flex;
+    gap: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(72, 22, 92, .07);
+
+    transition: .25s;
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 13px 30px rgba(95, 28, 126, .13);
 }
 
 .service-icon {
-    font-size: 34px;
-    margin-bottom: 15px;
+    min-width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #7e21b8;
+
+    border-radius: 50%;
+
+    font-size: 27px;
 }
 
 .service-card h3 {
-    margin-bottom: 12px;
-    color: #6A0DAD;
+    font-family: "Caveat", cursive;
+    font-size: 29px;
+    margin-bottom: 7px;
 }
 
-/* =========================
+.service-card p {
+    font-size: 14px;
+}
+
+
+/* ========================================
    ABOUT
-   ========================= */
+   ======================================== */
 
 .about {
-    background-color: #111111;
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #070707,
+            #170b1d
+        );
+
     color: white;
 }
 
-.about-content {
-    max-width: 850px;
+.about-layout {
+    max-width: 1100px;
     margin: auto;
-}
 
-.about h2 {
-    font-size: 40px;
-    margin-bottom: 22px;
-}
-
-.about p {
-    margin-bottom: 18px;
-    font-size: 17px;
-}
-
-/* =========================
-   WHY TECH CHE
-   ========================= */
-
-.why-us {
-    background-color: white;
-}
-
-.benefits {
-    max-width: 1000px;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    text-align: center;
+    grid-template-columns: .8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 60px;
 }
 
-.benefits h3 {
-    color: #6A0DAD;
-    margin-bottom: 10px;
-    font-size: 22px;
+.about-visual {
+    display: flex;
+    justify-content: center;
 }
 
-/* =========================
+.about-logo-box {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 25px;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        0 0 30px rgba(165, 47, 224, .35);
+}
+
+.about-logo-box img {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+}
+
+.about-text h2 {
+    font-family: "Caveat", cursive;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    margin: 10px 0 20px;
+}
+
+.about-text > p:last-child {
+    max-width: 570px;
+    color: #eeeeee;
+}
+
+
+/* ========================================
+   WHY TECH CHE
+   ======================================== */
+
+.why {
+    padding: 65px 25px;
+    background: #fff;
+}
+
+.why-box {
+    max-width: 720px;
+
+    margin: auto;
+
+    background: #f7effa;
+
+    border-radius: 25px;
+
+    padding: 40px 50px;
+
+    box-shadow:
+        0 8px 25px rgba(77, 26, 96, .07);
+}
+
+.why-list {
+    margin-top: 20px;
+}
+
+.why-list p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.why-list p::first-letter {
+    color: #9227cf;
+}
+
+
+/* ========================================
    OUR WORK
-   ========================= */
+   ======================================== */
 
 .work {
-    background-color: #F7F3FA;
+    padding: 75px 25px;
+    background: #faf7fb;
 }
 
-.center-text {
+.work-placeholder {
+    max-width: 600px;
+
+    margin: auto;
+
     text-align: center;
-    font-size: 18px;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 2px dashed #c888e6;
 }
 
-/* =========================
-   QUOTE SECTION
-   ========================= */
+.work-placeholder > p:first-child {
+    font-size: 45px;
+}
+
+.work-placeholder h3 {
+    font-family: "Caveat", cursive;
+    font-size: 34px;
+    margin: 5px 0 10px;
+}
+
+
+/* ========================================
+   QUOTE
+   ======================================== */
 
 .quote {
-    background: linear-gradient(120deg, #6A0DAD, #A020F0);
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6e18a8,
+            #b23fe9
+        );
+
     color: white;
-    text-align: center;
 }
 
-.quote div {
-    max-width: 700px;
+.quote-content {
+    max-width: 1000px;
     margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
 }
 
 .quote h2 {
-    font-size: 40px;
+    font-family: "Caveat", cursive;
+    font-size: 38px;
+}
+
+.quote-button {
+    background: #080808;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+.contact {
+    padding: 80px 25px;
+
+    text-align: center;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+.contact h2 {
+    font-family: "Caveat", cursive;
+
+    font-size: 50px;
+
+    margin: 5px 0 15px;
+}
+
+.contact > p {
     margin-bottom: 18px;
 }
 
-.quote p {
-    margin-bottom: 28px;
-    font-size: 18px;
+.service-area {
+    font-weight: 600;
 }
 
-.quote .primary-button {
-    background-color: white;
-    color: #6A0DAD;
-}
 
-.quote .primary-button:hover {
-    background-color: #111111;
-    color: white;
-}
-
-/* =========================
-   CONTACT
-   ========================= */
-
-.contact {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.contact p {
-    margin-bottom: 15px;
-}
-
-/* =========================
+/* ========================================
    FOOTER
-   ========================= */
+   ======================================== */
 
 footer {
-    background-color: #111111;
+    background: #050505;
+
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+
+    padding: 30px 25px;
 }
 
-footer h3 {
-    color: #d9a7ff;
-    font-size: 25px;
-    margin-bottom: 8px;
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.footer-brand {
+    font-family: "Caveat", cursive;
+
+    font-size: 31px;
+
+    color: #bd4ef4;
+}
+
+.footer-services {
+    font-size: 13px;
+}
+
+.footer-services span {
+    color: #b740ed;
+    margin: 0 10px;
 }
 
 footer p {
-    color: #cccccc;
-    margin: 5px 0;
+    font-size: 11px;
+    color: #bbb;
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-   ========================= */
 
-@media (max-width: 850px) {
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 950px) {
 
     nav ul {
         display: none;
     }
 
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .purple-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-text > p:last-child {
+        margin: auto;
+    }
+
+    .quote-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    nav {
+        min-height: 75px;
+        padding: 8px 15px;
+    }
+
+    .brand img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .brand-name {
+        font-size: 27px;
+    }
+
+    .tagline {
+        display: none;
+    }
+
     .nav-button {
-        font-size: 13px;
+        padding: 10px 15px;
+        font-size: 11px;
     }
 
     .hero {
-        min-height: 550px;
+        padding: 60px 20px;
     }
 
-    .hero h1 {
-        font-size: 46px;
+    .hero-content {
+        min-height: auto;
     }
 
-    .service-grid,
-    .benefits {
-        grid-template-columns: 1fr;
+    .hero-text h1 {
+        font-size: 57px;
     }
 
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .section-heading h2,
-    .about h2,
-    .quote h2 {
-        font-size: 32px;
+    .hero-image img {
+        width: 280px;
+    }
+
+    .purple-glow {
+        width: 290px;
+        height: 220px;
+    }
+
+    .section-heading h2 {
+        font-size: 41px;
+    }
+
+    .service-card {
+        flex-direction: column;
+    }
+
+    .service-icon {
+        width: 65px;
+    }
+
+    .about-text h2,
+    .contact h2 {
+        font-size: 43px;
+    }
+
+    .why-box {
+        padding: 30px 25px;
     }
 }
