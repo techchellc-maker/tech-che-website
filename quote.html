@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request a Quote | Tech Che</title>
+
+    <meta name="description"
+          content="Request a quote from Tech Che for device repair, IT support, or cybersecurity services.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav>
+
+            <a href="index.html" class="brand">
+                <img src="tech-che-logo.png" alt="Tech Che Logo">
+
+                <div>
+                    <span class="brand-name">Tech Che</span>
+                    <span class="tagline">Your Tech. Our Expertise.</span>
+                </div>
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#work">Our Work</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <a href="quote.html" class="nav-button">
+                Request a Quote →
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main class="quote-page">
+
+        <section class="quote-hero">
+
+            <p class="small-heading">LET'S TALK TECH</p>
+
+            <h1>
+                Tell me what's
+                <span>going on. ♡</span>
+            </h1>
+
+            <p>
+                Need a repair or some tech help?
+                Give me a few details below and I'll take a look.
+            </p>
+
+        </section>
+
+
+        <section class="quote-form-section">
+
+            <div class="quote-form-container">
+
+                <form id="tech-che-quote-form">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="First & Last Name"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="(912) 555-1234"
+                                required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            What can Tech Che help you with? *
+                        </label>
+
+                        <select id="service" name="service" required>
+
+                            <option value="">
+                                Choose a service
+                            </option>
+
+                            <option value="Device Repair">
+                                Device Repair
+                            </option>
+
+                            <option value="IT Support">
+                                IT Support
+                            </option>
+
+                            <option value="Cybersecurity">
+                                Cybersecurity
+                            </option>
+
+                            <option value="Other">
+                                Something Else
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="device">
+                                Device Type
+                            </label>
+
+                            <select id="device" name="device">
+
+                                <option value="">
+                                    Select Device
+                                </option>
+
+                                <option>Phone</option>
+                                <option>Tablet / iPad</option>
+                                <option>Laptop</option>
+                                <option>Desktop Computer</option>
+                                <option>Smartwatch</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="model">
+                                Brand / Model
+                            </label>
+
+                            <input
+                                type="text"
+                                id="model"
+                                name="model"
+                                placeholder="Example: iPhone 14">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="problem">
+                            Tell me what's going on *
+                        </label>
+
+                        <textarea
+                            id="problem"
+                            name="problem"
+                            rows="6"
+                            placeholder="Tell me what's wrong with your device or what kind of tech help you need..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-method">
+                            How would you like me to contact you?
+                        </label>
+
+                        <select
+                            id="contact-method"
+                            name="contact-method">
+
+                            <option>Text Message</option>
+                            <option>Phone Call</option>
+                            <option>Email</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-submit">
+
+                        Send My Request →
+
+                    </button>
+
+
+                    <p class="form-note">
+                        ♡ No payment is required to request a quote.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                Tech Che ♡
+            </div>
+
+            <div class="footer-services">
+                Device Repair
+                <span>•</span>
+                IT Support
+                <span>•</span>
+                Cybersecurity
+            </div>
+
+            <p>
+                © 2026 Tech Che LLC. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
