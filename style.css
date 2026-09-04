@@ -1257,3 +1257,46 @@ textarea:focus {
         display: none;
     }
 }
+/* CLEAN HEADER CONTACT */
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-contact-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.nav-contact-links a:hover {
+    color: var(--sage);
+}
+
+/* Sage accent on quote button */
+.nav-contact .nav-button {
+    background: linear-gradient(
+        135deg,
+        var(--sage),
+        var(--sage-dark)
+    );
+}
+
+/* Mobile */
+@media (max-width: 950px) {
+
+    .nav-contact-links {
+        display: none;
+    }
+
+}
