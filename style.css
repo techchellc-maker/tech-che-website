@@ -1140,3 +1140,56 @@ footer p {
         font-size: 16px;
     }
 }
+/* ==================================
+   TECH CHE SAGE GREEN ACCENTS
+================================== */
+
+/* Main buttons */
+.nav-button,
+.primary-button,
+.form-submit {
+    background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+    color: white;
+    border: none;
+}
+
+.nav-button:hover,
+.primary-button:hover,
+.form-submit:hover {
+    background: var(--sage-dark);
+    transform: translateY(-2px);
+}
+
+/* Sage accent on navigation */
+nav ul li a:hover {
+    color: var(--sage);
+}
+
+/* Service icons - alternate purple and sage */
+.service-card:nth-child(1) .service-icon,
+.service-card:nth-child(3) .service-icon {
+    background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+}
+
+/* Why Choose Tech Che */
+.why {
+    background: var(--sage-soft);
+}
+
+/* Small decorative accents */
+.local-message {
+    color: var(--sage-light);
+}
+
+/* Form focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(143, 167, 123, 0.15);
+}
+
+/* Thank-you heart */
+.thank-you-heart {
+    color: var(--sage);
+}
