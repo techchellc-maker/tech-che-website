@@ -20,10 +20,19 @@ body {
 }
 
 :root {
+    /* Original Tech Che Purple */
     --purple: #9c27e8;
     --deep-purple: #6411a3;
     --light-purple: #e6c5f7;
     --soft-purple: #f6effa;
+
+    /* New Sage Green */
+    --sage: #8fa77b;
+    --sage-dark: #5f7754;
+    --sage-light: #dfe8d7;
+    --sage-soft: #f1f5ed;
+
+    /* Neutrals */
     --black: #090909;
     --off-black: #140d18;
     --white: #ffffff;
