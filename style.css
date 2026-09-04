@@ -1193,3 +1193,67 @@ textarea:focus {
 .thank-you-heart {
     color: var(--sage);
 }
+/* ==================================
+   TOP CONTACT BAR
+================================== */
+
+.top-contact-bar {
+    background: var(--sage);
+    color: var(--black);
+    min-height: 38px;
+    padding: 7px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.contact-details,
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.top-contact-bar a {
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.top-contact-bar a:hover {
+    color: var(--white);
+}
+
+.top-slogan {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    .top-contact-bar {
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px 15px;
+        text-align: center;
+    }
+
+    .contact-details {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .top-slogan {
+        display: none;
+    }
+}
