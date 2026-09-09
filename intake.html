@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Repair Intake & Authorization | Tech Che</title>
+
+    <meta name="description"
+          content="Tech Che repair intake and customer authorization form.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <nav>
+
+        <a href="index.html" class="brand">
+            <img src="tech-che-logo.png" alt="Tech Che Logo">
+
+            <div>
+                <span class="brand-name">Tech Che</span>
+                <span class="tagline">Your Tech. Our Expertise.</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">Our Work</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="policies.html">Policies</a></li>
+        </ul>
+
+        <a href="quote.html" class="nav-button">
+            Request a Quote →
+        </a>
+
+      
+    </nav>
+</header>
+
+
+<main class="quote-page">
+
+    <!-- PAGE HEADING -->
+    <section class="quote-hero">
+
+        <p class="small-heading">TECH CHE DEVICE REPAIR</p>
+
+        <h1>
+            Repair Intake &
+            <span>Authorization ♡</span>
+        </h1>
+
+        <p>
+            Please complete this form before your device is accepted
+            for repair.
+        </p>
+
+    </section>
+
+
+    <!-- INTAKE FORM -->
+    <section class="quote-form-section">
+
+        <div class="quote-form-container">
+
+            <form id="tech-che-intake-form"
+                  action="YOUR-FORMSPREE-ENDPOINT"
+                  method="POST">
+
+                <input type="hidden"
+                       name="_subject"
+                       value="New Tech Che Repair Intake">
+
+
+                <!-- CUSTOMER INFORMATION -->
+
+                <p class="intake-section-title">
+                    Customer Information
+                </p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="customer-name">Customer Name *</label>
+
+                        <input type="text"
+                               id="customer-name"
+                               name="customer_name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number *</label>
+
+                        <input type="tel"
+                               id="customer-phone"
+                               name="customer_phone"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="customer-email">Email Address *</label>
+
+                    <input type="email"
+                           id="customer-email"
+                           name="customer_email"
+                           required>
+                </div>
+
+
+                <!-- DEVICE INFORMATION -->
+
+                <p class="intake-section-title">
+                    Device Information
+                </p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="device-type">Device Type *</label>
+
+                        <select id="device-type"
+                                name="device_type"
+                                required>
+
+                            <option value="">Select Device</option>
+                            <option>Phone</option>
+                            <option>Tablet / iPad</option>
+                            <option>Laptop</option>
+                            <option>Desktop Computer</option>
+                            <option>Smartwatch</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="device-model">
+                            Brand / Model *
+                        </label>
+
+                        <input type="text"
+                               id="device-model"
+                               name="device_model"
+                               placeholder="Example: iPhone 14 Pro"
+                               required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="serial">
+                        Serial Number / IMEI
+                    </label>
+
+                    <input type="text"
+                           id="serial"
+                           name="serial_imei"
+                           placeholder="If available">
+
+                </div>
+
+
+                <!-- DEVICE CONDITION -->
+
+                <p class="intake-section-title">
+                    Device Condition
+                </p>
+
+                <div class="form-group">
+
+                    <label for="condition">
+                        Describe the device's current condition *
+                    </label>
+
+                    <textarea id="condition"
+                              name="device_condition"
+                              rows="4"
+                              placeholder="Example: cracked screen, scratches on frame, device powers on..."
+                              required></textarea>
+
+                </div>
+
+
+                <!-- REPAIR -->
+
+                <p class="intake-section-title">
+                    Repair Information
+                </p>
+
+                <div class="form-group">
+
+                    <label for="repair">
+                        Requested Repair / Service *
+                    </label>
+
+                    <textarea id="repair"
+                              name="requested_repair"
+                              rows="4"
+                              placeholder="Describe the repair being requested..."
+                              required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="estimate">
+                        Estimated Repair Cost
+                    </label>
+
+                    <input type="text"
+                           id="estimate"
+                           name="estimated_cost"
+                           placeholder="Example: $125.00">
+
+                </div>
+
+
+              <!-- DEVICE ACCESS -->
+
+<p class="intake-section-title">
+    Device Access
+</p>
+
+<div class="form-group">
+
+    <label for="device-access">
+        Will Tech Che need access to the device for testing?
+    </label>
+
+    <select id="device-access"
+            name="device_access">
+
+        <option value="">
+            Select an option
+        </option>
+
+        <option value="Yes - access will be provided separately">
+            Yes — I will provide access separately if needed
+        </option>
+
+        <option value="No">
+            No
+        </option>
+
+        <option value="Not Applicable">
+            Not Applicable
+        </option>
+
+    </select>
+
+</div>
+
+<p class="intake-help">
+    For your security, please do not submit device passwords or
+    passcodes through this form. If access is necessary for
+    diagnosis or testing, Tech Che will arrange for access separately.
+</p>
+
+                <!-- ACKNOWLEDGMENTS -->
+
+                <p class="intake-section-title">
+                    Customer Acknowledgments
+                </p>
+
+
+                <div class="policy-agreement">
+
+                    <label class="policy-checkbox">
+
+                        <input type="checkbox"
+                               name="repair_authorization"
+                               value="Agreed"
+                               required>
+
+                        <span>
+                            I authorize Tech Che LLC to perform the repair
+                            or service described above.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="policy-agreement">
+
+                    <label class="policy-checkbox">
+
+                        <input type="checkbox"
+                               name="data_acknowledgment"
+                               value="Agreed"
+                               required>
+
+                        <span>
+                            I understand that I am responsible for backing up
+                            important data before service when possible and
+                            acknowledge that data preservation or recovery
+                            cannot be guaranteed.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="policy-agreement">
+
+                    <label class="policy-checkbox">
+
+                        <input type="checkbox"
+                               name="pickup_payment_acknowledgment"
+                               value="Agreed"
+                               required>
+
+                        <span>
+                            I understand that payment is due according to the
+                            agreed service terms and that completed devices
+                            must be paid for and picked up within
+                            <strong>30 calendar days</strong> after Tech Che
+                            notifies me that service is complete.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="policy-agreement">
+
+                    <label class="policy-checkbox">
+
+                        <input type="checkbox"
+                               name="policy_agreement"
+                               value="Agreed"
+                               required>
+
+                        <span>
+                            I have read and agree to Tech Che LLC's
+                            <a href="policies.html"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Service, Payment & Privacy Policies
+                            </a>.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- ELECTRONIC SIGNATURE -->
+
+                <p class="intake-section-title">
+                    Customer Authorization
+                </p>
+
+                <div class="form-group">
+
+                    <label for="signature">
+                        Type Your Full Name *
+                    </label>
+
+                    <input type="text"
+                           id="signature"
+                           name="electronic_signature"
+                           placeholder="Your full legal name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="signature-date">
+                        Date *
+                    </label>
+
+                    <input type="date"
+                           id="signature-date"
+                           name="signature_date"
+                           required>
+
+                </div>
+
+
+                <p class="signature-notice">
+                    By typing my name above and submitting this form,
+                    I confirm that the information provided is accurate
+                    and that I agree to the acknowledgments and
+                    authorizations above.
+                </p>
+
+
+                <button type="submit"
+                        class="form-submit">
+
+                    Submit Repair Authorization →
+
+                </button>
+
+
+                <p class="form-note">
+                    ♡ Thank you for trusting Tech Che with your tech.
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            Tech Che ♡
+        </div>
+
+        <div class="footer-services">
+            Device Repair
+            <span>•</span>
+            IT Support
+            <span>•</span>
+            Cybersecurity
+        </div>
+
+        <p>
+            <a href="policies.html">Policies & Privacy</a>
+        </p>
+
+        <p>
+            © 2026 Tech Che LLC. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
