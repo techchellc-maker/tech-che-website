@@ -1545,3 +1545,84 @@ footer a:hover {
         font-size: 16px;
     }
 }
+/* ========================================
+   TECH CHE REPAIR INTAKE FORM
+   ======================================== */
+
+.intake-section-title {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--deep-purple);
+
+    margin: 35px 0 18px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid var(--sage-light);
+}
+
+.intake-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.intake-help {
+    margin: -8px 0 25px;
+
+    padding: 14px 16px;
+
+    background: var(--sage-soft);
+
+    border-left: 4px solid var(--sage);
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+.signature-notice {
+    margin: 5px 0 25px;
+
+    padding: 18px;
+
+    background: #f6effa;
+
+    border: 1px solid #e6c5f7;
+    border-radius: 12px;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* Intake agreement boxes */
+
+#tech-che-intake-form .policy-agreement {
+    margin-bottom: 14px;
+}
+
+#tech-che-intake-form .policy-checkbox span {
+    line-height: 1.7;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .intake-section-title {
+        font-size: 27px;
+        margin-top: 30px;
+    }
+
+    .intake-help,
+    .signature-notice {
+        font-size: 11px;
+    }
+}
