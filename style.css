@@ -1374,3 +1374,99 @@ footer a:hover {
         font-size: 0.8rem;
     }
 }
+/* ========================================
+   TECH CHE MOBILE MENU
+   ======================================== */
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Tablet + Mobile */
+@media (max-width: 950px) {
+
+    nav {
+        position: relative;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    /* Keep menu closed until hamburger is tapped */
+    nav #nav-menu {
+        display: none;
+
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 15px;
+        right: 15px;
+
+        background: #0b0710;
+
+        padding: 18px;
+
+        border: 1px solid rgba(192, 92, 255, 0.25);
+        border-radius: 18px;
+
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.35);
+
+        flex-direction: column;
+        gap: 4px;
+
+        z-index: 2000;
+    }
+
+    /* Open menu */
+    nav #nav-menu.show {
+        display: flex;
+    }
+
+    nav #nav-menu li {
+        width: 100%;
+    }
+
+    nav #nav-menu li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 14px;
+
+        border-radius: 10px;
+
+        color: white;
+
+        font-size: 14px;
+    }
+
+    nav #nav-menu li a:hover {
+        background: rgba(156, 39, 232, 0.15);
+        color: #c05cff;
+    }
+}
+
+
+/* Phone adjustments */
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        font-size: 27px;
+        margin-right: 8px;
+    }
+
+    nav #nav-menu {
+        top: calc(100% + 4px);
+    }
+}
