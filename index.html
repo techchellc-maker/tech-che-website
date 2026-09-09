@@ -34,7 +34,11 @@
                 </div>
             </a>
 
-         <ul>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
+    ☰
+</button>
+
+<ul id="nav-menu">
     <li><a href="index.html#home">Home</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#services">Services</a></li>
@@ -42,7 +46,6 @@
     <li><a href="index.html#contact">Contact</a></li>
     <li><a href="policies.html">Policies</a></li>
 </ul>
-
            
 
     <a href="quote.html" class="nav-button">
@@ -342,7 +345,11 @@
         </div>
 
     </footer>
-
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+    }
+</script>
 </body>
 
 </html>
