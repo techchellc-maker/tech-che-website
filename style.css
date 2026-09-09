@@ -1470,3 +1470,78 @@ footer a:hover {
         top: calc(100% + 4px);
     }
 }
+/* ========================================
+   QUOTE FORM POLICY AGREEMENT
+   ======================================== */
+
+.policy-agreement {
+    margin: 10px 0 25px;
+    padding: 18px 20px;
+
+    background: var(--sage-soft);
+
+    border: 1px solid var(--sage-light);
+    border-radius: 14px;
+}
+
+.policy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.policy-checkbox input {
+    width: 18px;
+    height: 18px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--deep-purple);
+
+    cursor: pointer;
+}
+
+.policy-checkbox a {
+    color: var(--deep-purple);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.policy-checkbox a:hover {
+    color: var(--purple);
+}
+
+.policy-agreement-note {
+    margin: 8px 0 0 30px;
+
+    font-family: "Caveat", cursive;
+    font-size: 17px;
+
+    color: var(--sage-dark);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .policy-agreement {
+        padding: 16px;
+    }
+
+    .policy-checkbox {
+        font-size: 12px;
+    }
+
+    .policy-agreement-note {
+        margin-left: 30px;
+        font-size: 16px;
+    }
+}
