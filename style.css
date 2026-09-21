@@ -1846,3 +1846,36 @@ footer a:hover {
         text-align: center;
     }
 }
+/* BUSINESS HOURS */
+
+.business-hours {
+    max-width: 500px;
+    margin: 35px auto;
+    padding: 30px;
+    text-align: center;
+    background: #f5f7f2;
+    border-radius: 18px;
+    border: 1px solid #d8e1d2;
+}
+
+.business-hours h3 {
+    color: #6b4b7a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.business-hours p {
+    margin: 14px 0;
+    line-height: 1.6;
+}
+
+.business-hours strong {
+    color: #6b4b7a;
+}
+
+.business-hours small {
+    display: block;
+    margin-top: 20px;
+    color: #666;
+    font-style: italic;
+}
